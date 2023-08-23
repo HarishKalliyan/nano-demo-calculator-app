@@ -9,7 +9,7 @@ def greeting():
 
 @app.route("/calculator/add", methods=['POST'])
 def add():
-    temp = requests.json
+    temp = request.json
     a = int(temp["first"])
     b = int(temp["second"])
     return { "result" : a + b}
@@ -17,7 +17,7 @@ def add():
 
 @app.route("/calculator/subtract", methods=['POST'])
 def subtract():
-    temp = requests.json
+    temp = request.json
     a = int(temp["first"])
     b = int(temp["second"])
     return { "result" : a - b}
